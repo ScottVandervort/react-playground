@@ -1,0 +1,151 @@
+JSX
+-------------------------------------------
+
+    - Everything must be enclosed in a single tag.
+
+ES6
+-------------------------------------------
+
+    Import/export
+    -------------------------------------------
+
+        - It is possible to import/export multiple components from a file.
+            At bottom of Component file :
+                export { Comp1, Comp2 };
+            At top of consumer :
+                import { Comp1, Comp2 } from './FILE_NAME';
+        - Only need to import Components that will be directly used; Do not need to import sub-components rendered by the component being imported
+
+Components
+-------------------------------------------
+
+    - The simplist component can be a function that accepts a argument ( props ) and returns some JSX.
+    - Component constructor should always accept at least one argument ( props ).
+    - Always make sure you export the component.
+    - Must be in PascalCase - no underscores.
+
+    Props
+    -------------------------------------------
+
+        - Immutable; Do not modify.
+
+    
+TODO
+-------------------------------------------
+   
+   - DO I need propr argument in Forms example; why or why not?
+
+
+
+
+class ParentChildMessaging extends React.Component {
+    
+    return (
+      <div>
+        <h2>Parent Child Messaging</h2>  
+        <p></p>
+      </div>
+    );  
+}
+
+
+/*
+class ParentChildMessaging_Parent extends React.Component {
+  
+  constructor(props) {
+    super(props);
+    this.state = {  myValue : "Hello" };
+  }    
+  
+    return (
+      <div>
+        <h2>I'm the Parent</h2>  
+        <p></p>
+        <ParentChildMessaging_Child myValue={this.state}/>
+      </div>
+    );          
+}
+
+class ParentChildMessaging_Child extends React.Component {
+  
+  constructor(props) {
+    super(props);
+  }    
+  
+    return (
+      <div>
+        <h2>I'm the Child. My name is {this.props.myValue}</h2>          
+      </div>
+    );   
+  
+}
+*/
+
+
+
+
+/***********************************************************/
+
+class ChildParentMessaging extends React.Component {
+  
+}
+
+class PeerToPeerMessaging extends React.Component {
+  
+}
+
+// TODO : GranparentToGrandchildMessaging
+// TODO : Collections / Repeaters
+// TODO : Routing.
+// TODO : => example
+
+
+
+
+/*
+class MyParent extends React.Component {
+  
+  // Variables cannot be declared within a component body.
+  // constructor must start w/ super().
+  // first call to state must init.
+  constructor() {
+    super();    
+    this.state = {title: ''};    
+    
+    this.handleChange = this.handleChange.bind(this);
+  }
+  
+  render() {
+    return (
+      <div>
+        Parent
+        <input type="text" value={this.state.title} onChange={this.handleChange}/>
+        { this.state.value }
+        <MyChild title={this.state.title}/>
+      </div>
+    );
+  }
+  
+  handleChange(event) {
+    this.setState({value: event.target.value});
+  }
+}
+
+class MyChild extends React.Component {
+  render() {
+        
+    return (
+      <div>
+        Child
+        {this.props.title}
+      </div>
+    );
+  }
+}
+*/
+
+
+ReactDOM.render(
+	<App />,
+  document.getElementById('root')
+);   
