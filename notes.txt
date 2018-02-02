@@ -1,3 +1,8 @@
+Urls
+-------------------------------------------
+
+  https://www.javascriptstuff.com/component-communication/#1-props
+
 JSX
 -------------------------------------------
 
@@ -43,44 +48,7 @@ class ParentChildMessaging extends React.Component {
     return (
       <div>
         <h2>Parent Child Messaging</h2>  
-        <p></p>
-      </div>
-    );  
-}
-
-
-/*
-class ParentChildMessaging_Parent extends React.Component {
-  
-  constructor(props) {
-    super(props);
-    this.state = {  myValue : "Hello" };
-  }    
-  
-    return (
-      <div>
-        <h2>I'm the Parent</h2>  
-        <p></p>
-        <ParentChildMessaging_Child myValue={this.state}/>
-      </div>
-    );          
-}
-
-class ParentChildMessaging_Child extends React.Component {
-  
-  constructor(props) {
-    super(props);
-  }    
-  
-    return (
-      <div>
-        <h2>I'm the Child. My name is {this.props.myValue}</h2>          
-      </div>
-    );   
-  
-}
-*/
-
+    
 
 
 

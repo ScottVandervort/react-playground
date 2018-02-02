@@ -4,6 +4,8 @@ import Simple from './Components/Simple';
 import OneWayBinding from './Components/OneWayBinding';
 import TwoWayBinding from './Components/TwoWayBinding';
 import ParentChild from './Components/ParentChild';
+import ParentChildMessagingProps from './Components/ParentChildMessagingProps';
+import ParentChildMessagingMethod from './Components/ParentChildMessagingMethod';
 //import logo from './logo.svg';
 //import './App.css';
 
@@ -26,6 +28,8 @@ class App extends Component {
         <TwoWayBinding/>
         <FormPost/>
         <ParentChild/>
+        <ParentChildMessagingProps/>
+        <ParentChildMessagingMethod/>
       </div>      
     );
   }
