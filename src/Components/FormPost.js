@@ -5,9 +5,6 @@ class FormPost extends React.Component {
       super(props);
       this.state = {  firstName : "Hello",
                       lastName  : "World" };
-                     
-      this.handleChange = this.handleChange.bind(this);
-      this.handleSubmit = this.handleSubmit.bind(this);
     }
   
     handleChange(event) {
@@ -27,10 +24,13 @@ class FormPost extends React.Component {
     render() {
       return (
         <div>
-          <h2>Form Post</h2>
-          <form onSubmit={this.handleSubmit}>                
-            <input name="firstName" placeholder="First Name" type="text" value={this.state.firstName} onChange={this.handleChange} />       
-            <input name="lastName" placeholder="Last Name" type="text" value={this.state.lastName} onChange={this.handleChange} />                     <input type="submit" value="Submit Form" />
+          <h2>Form POST</h2>            
+          <p>Pass a method from Parent to Child; Child can invoke the method to pass messages.</p> 
+          {/* Use arrow syntax to preserve scope; otherwise when onSubmit(), etc... is invoked it won't be in the right context. */}               
+          <form onSubmit={(e) => this.handleSubmit(e)}>                
+            <input name="firstName" placeholder="First Name" type="text" value={this.state.firstName} onChange={(e) => this.handleChange(e)} />       
+            <input name="lastName" placeholder="Last Name" type="text" value={this.state.lastName} onChange={(e) => this.handleChange(e)} />       
+            <input type="submit" value="Submit Form" />
           </form>
          </div>
       );

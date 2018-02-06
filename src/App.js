@@ -6,6 +6,7 @@ import TwoWayBinding from './Components/TwoWayBinding';
 import ParentChild from './Components/ParentChild';
 import ParentChildMessagingProps from './Components/ParentChildMessagingProps';
 import ParentChildMessagingMethod from './Components/ParentChildMessagingMethod';
+import ChildParentMessagingMethod from './Components/ChildParentMessagingMethod';
 //import logo from './logo.svg';
 //import './App.css';
 
@@ -30,6 +31,7 @@ class App extends Component {
         <ParentChild/>
         <ParentChildMessagingProps/>
         <ParentChildMessagingMethod/>
+        <ChildParentMessagingMethod/>
       </div>      
     );
   }

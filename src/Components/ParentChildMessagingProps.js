@@ -1,29 +1,24 @@
 import React from 'react';
+import Utilities from "../Utilities";
 
 class ParentChildMessagingProps extends React.Component {
     
     constructor(props) {
         super(props);        
-        this.messages = [ "Hello", "Mars", "foo", "bar" ];
-        this.messageIndex = 0;
-        this.state = { "message" : this.messages[this.messageIndex] };
+
+        this.state = { "message" : "" };
       }
     
-    handleClick (e) {
-
-        this.messageIndex++;
-        if (this.messageIndex >= this.messages.length)
-            this.messageIndex = 0;
-
-        this.setState({"message" : this.messages[this.messageIndex]});        
+      onSendMessageClick (e) {
+        this.setState({"message" : Utilities.generateRandomString()});        
     }
 
     render() {
         return (        
             <div>
-                <h2>Parent Child Messaging using Props</h2>  
+                <h2>Parent-Child Messaging using Props</h2>  
                 <p>Child components can be messaged by Parent using props. If Parent modifies the prop the child is updated accordingly.</p>                                
-                <button onClick={(e) => this.handleClick(e)}>Send Message to Child</button>   
+                <button onClick={(e) => this.onSendMessageClick(e)}>Send Message to Child</button>   
                 <ParentChildMessagingPropsChild message={this.state.message}/>
             </div>
         );  

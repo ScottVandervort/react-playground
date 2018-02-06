@@ -21,6 +21,10 @@ ES6
                 import { Comp1, Comp2 } from './FILE_NAME';
         - Only need to import Components that will be directly used; Do not need to import sub-components rendered by the component being imported
 
+    Arrow Syntax ( => )
+
+        - Use to preserve scope; Useful when declaring event handlers in render() as event will not necessarily be invoked in the class' scope.
+
 Components
 -------------------------------------------
 
@@ -34,86 +38,19 @@ Components
 
         - Immutable; Do not modify.
 
+    State
+    -------------------------------------------
+
+      - State is not initialized; If want to use in render(0 need to define variable.
+
+
     
 TODO
 -------------------------------------------
    
-   - DO I need propr argument in Forms example; why or why not?
+  1) Peer-to-Peer Messaging.
+  2) => 
+  3) Routing
+  4) AJAX / Service Layer
+  5) Integrating with JQuery Widgets
 
-
-
-
-class ParentChildMessaging extends React.Component {
-    
-    return (
-      <div>
-        <h2>Parent Child Messaging</h2>  
-    
-
-
-
-/***********************************************************/
-
-class ChildParentMessaging extends React.Component {
-  
-}
-
-class PeerToPeerMessaging extends React.Component {
-  
-}
-
-// TODO : GranparentToGrandchildMessaging
-// TODO : Collections / Repeaters
-// TODO : Routing.
-// TODO : => example
-
-
-
-
-/*
-class MyParent extends React.Component {
-  
-  // Variables cannot be declared within a component body.
-  // constructor must start w/ super().
-  // first call to state must init.
-  constructor() {
-    super();    
-    this.state = {title: ''};    
-    
-    this.handleChange = this.handleChange.bind(this);
-  }
-  
-  render() {
-    return (
-      <div>
-        Parent
-        <input type="text" value={this.state.title} onChange={this.handleChange}/>
-        { this.state.value }
-        <MyChild title={this.state.title}/>
-      </div>
-    );
-  }
-  
-  handleChange(event) {
-    this.setState({value: event.target.value});
-  }
-}
-
-class MyChild extends React.Component {
-  render() {
-        
-    return (
-      <div>
-        Child
-        {this.props.title}
-      </div>
-    );
-  }
-}
-*/
-
-
-ReactDOM.render(
-	<App />,
-  document.getElementById('root')
-);   

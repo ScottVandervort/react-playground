@@ -1,33 +1,31 @@
-/* TODO: 
-    - What if I call method on child? Is parent invoked?
-    - When parent calls method on child is it notified?
-    - What about grand children?
-*/
-
 import React from 'react';
+import Utilities from "../Utilities";
 
 class ParentChildMessagingMethod extends React.Component {
         
     constructor(props) {
         super(props);        
-        this.messages = [ "Hello", "Mars", "foo", "bar" ];
-        this.messageIndex = 0;
+
+        this.state = {  "responseFromChild" : "" };
     }      
 
-    handleClick (e) {
+    onSendMessageToChild (e) {
 
-        this.messageIndex++;
-        if (this.messageIndex >= this.messages.length)
-            this.messageIndex = 0;
+        // Call messageFromParent() on Child.
+        var responseFromChild = this.childComponent.messageFromParent(Utilities.generateRandomString());      
 
-        this.childComponent.sendMessage(this.messages[this.messageIndex]);      
+        this.setState({"responseFromChild" : responseFromChild}); 
     }      
 
     render() {
         return (        
-            <div>                            
-                <ParentChildMessagingMethodChild ref={ childComponent => { this.childComponent = childComponent; }}/>                
-                <button onClick={(e) => this.handleClick(e)}>Send Message to Child</button>                   
+            <div>                   
+                <h2>Parent-Child Messaging using Method</h2>  
+                <p>Can pass a method reference to Child from Parent. The method can then be invoked from the Parent.</p>                         
+                { /* Get a reference to the Child Component. */}
+                <ParentChildMessagingMethodChild ref={ childComponent => { this.childComponent = childComponent; }}/>                            
+                <button onClick={(e) => this.onSendMessageToChild(e)}>Send Message to Child</button>                   
+                <p>Response from Child:{this.state.responseFromChild}</p>
             </div>
         );  
     }
@@ -37,20 +35,21 @@ class ParentChildMessagingMethodChild extends React.Component {
 
     constructor(props) {
         super(props);
-        this.state = {  myValue : "" };
+        this.state = {  messageFromParent : "" };
       }    
     
     render() {
         return (        
             <div>
-                <p>Message to Child : {this.state.myValue} </p>
+                <p>Message to Child : {this.state.messageFromParent} </p>
             </div>
         );  
     }  
 
-    sendMessage ( message ) {
-        this.setState({"myValue" : message}); 
-        return "Hello Parent!";
+    // This method is invoked by the Parent Component.
+    messageFromParent ( message ) {
+        this.setState({"messageFromParent" : message}); 
+        return "Hello " + message;
     }    
 }
 
