@@ -13,7 +13,7 @@ class OneWayBinding extends React.Component {
     render() {
       return (
         <div>
-          <h2>One-Way Binding</h2>            
+          <h3>One-Way Binding</h3>            
            <p>Without an onChange() event on the input the field becomes read-only; If the state changes the input is refreshed. Changes to the input however do not update the state.</p>
           <input name="myField" type="text" value={this.state.myValue} />       
           <button onClick={(e) => this.handleClick(e)}>Change State</button>        

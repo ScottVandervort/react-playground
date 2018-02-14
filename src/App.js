@@ -7,6 +7,7 @@ import ParentChild from './Components/ParentChild';
 import ParentChildMessagingProps from './Components/ParentChildMessagingProps';
 import ParentChildMessagingMethod from './Components/ParentChildMessagingMethod';
 import ChildParentMessagingMethod from './Components/ChildParentMessagingMethod';
+import SiblingMessaging from './Components/SiblingMessaging';
 //import logo from './logo.svg';
 //import './App.css';
 
@@ -24,14 +25,21 @@ class App extends Component {
         //</p>
       //</div>
       <div>         
+        <h1>React Playground</h1>
+        <h2>Basics</h2>
         <Simple myProp={"Hello World"}/>
+        <h2>Binding</h2>
         <OneWayBinding/>
         <TwoWayBinding/>
+        <h2>Form POSTS</h2>
         <FormPost/>
+        <h2>Nested Components</h2>
         <ParentChild/>
+        <h2>Messaging</h2>
         <ParentChildMessagingProps/>
         <ParentChildMessagingMethod/>
         <ChildParentMessagingMethod/>
+        <SiblingMessaging/>
       </div>      
     );
   }

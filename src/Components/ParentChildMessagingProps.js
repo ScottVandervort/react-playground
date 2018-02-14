@@ -16,7 +16,7 @@ class ParentChildMessagingProps extends React.Component {
     render() {
         return (        
             <div>
-                <h2>Parent-Child Messaging using Props</h2>  
+                <h3>Parent-Child Messaging using Props</h3>  
                 <p>Child components can be messaged by Parent using props. If Parent modifies the prop the child is updated accordingly.</p>                                
                 <button onClick={(e) => this.onSendMessageClick(e)}>Send Message to Child</button>   
                 <ParentChildMessagingPropsChild message={this.state.message}/>

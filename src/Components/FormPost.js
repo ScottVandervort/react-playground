@@ -24,7 +24,7 @@ class FormPost extends React.Component {
     render() {
       return (
         <div>
-          <h2>Form POST</h2>            
+          <h3>Form POST</h3>            
           <p>Pass a method from Parent to Child; Child can invoke the method to pass messages.</p> 
           {/* Use arrow syntax to preserve scope; otherwise when onSubmit(), etc... is invoked it won't be in the right context. */}               
           <form onSubmit={(e) => this.handleSubmit(e)}>                

@@ -25,6 +25,26 @@ ES6
 
         - Use to preserve scope; Useful when declaring event handlers in render() as event will not necessarily be invoked in the class' scope.
 
+    let versus var
+
+        - let honors the scope {} 
+        - var does not
+
+        Example: 
+
+            function myFunc () {
+                var foo = "hello";
+    
+                if (foo) {
+                    let foo = "bar";
+                }
+
+                return foo;
+            }
+
+            alert(myFunc()); // Returns "hello";
+
+
 Components
 -------------------------------------------
 
@@ -43,14 +63,19 @@ Components
 
       - State is not initialized; If want to use in render(0 need to define variable.
 
+    Messaging 
+    -------------------------------------------
 
-    
+    - Anything more complicated to direct child->parent or direct parent-<child communication should probably using publisher-subscriber ( it gets too complicated ).
+        
 TODO
 -------------------------------------------
    
-  1) Peer-to-Peer Messaging.
-  2) => 
+  2) Pub-sub
   3) Routing
+  3) Repeaters
+  2) => 
+  
   4) AJAX / Service Layer
   5) Integrating with JQuery Widgets
 

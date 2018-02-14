@@ -18,7 +18,7 @@ class ChildParentMessagingMethod extends React.Component {
         return (        
             <div>                            
                 {/* Use arrow syntax to preserve scope; otherwise when onMessageReceived() is invoked it won't be in the context of ChildParentMessagingMethod */}
-                <h2>Child-to-Parent Messaging using a Method</h2>            
+                <h3>Child-to-Parent Messaging using a Method</h3>            
                 <p>Pass a method from Parent to Child; Child can invoke the method to pass messages.</p>                
                 <ChildParentMessagingMethodChild messageParentFunc={(msg) => this.onMessageReceived(msg)}/>                
                 <p>Message from Child : { this.state.messageFromChild }</p>

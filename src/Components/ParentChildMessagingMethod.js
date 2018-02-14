@@ -20,7 +20,7 @@ class ParentChildMessagingMethod extends React.Component {
     render() {
         return (        
             <div>                   
-                <h2>Parent-Child Messaging using Method</h2>  
+                <h3>Parent-Child Messaging using Method</h3>  
                 <p>Can pass a method reference to Child from Parent. The method can then be invoked from the Parent.</p>                         
                 { /* Get a reference to the Child Component. */}
                 <ParentChildMessagingMethodChild ref={ childComponent => { this.childComponent = childComponent; }}/>                            
