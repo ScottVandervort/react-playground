@@ -45,6 +45,16 @@ ES6
             alert(myFunc()); // Returns "hello";
 
 
+Routing
+-------------------------------------------
+
+    - Different packages for native and browser/dom
+
+    npm install --save react-router-dom
+
+    https://reacttraining.com/react-router/web/example/route-config
+    https://medium.com/@pshrmn/a-simple-react-router-v4-tutorial-7f23ff27adf
+
 Components
 -------------------------------------------
 
@@ -52,6 +62,20 @@ Components
     - Component constructor should always accept at least one argument ( props ).
     - Always make sure you export the component.
     - Must be in PascalCase - no underscores.
+
+    Simple
+    -------------------------------------------
+
+        The most simple component just returns JSX; it can also accept props.
+
+        <!-- Declaration -->
+        const SimpleComponent = (props) => (
+            <span>Hello {props.myProp} <span>
+        )
+
+        <!-- Usage -->
+        <SimpleComponent myProp="World"/>
+
 
     Props
     -------------------------------------------
@@ -67,15 +91,19 @@ Components
     -------------------------------------------
 
     - Anything more complicated to direct child->parent or direct parent-<child communication should probably using publisher-subscriber ( it gets too complicated ).
+
+    Flux / Redux
+    -------------------------------------------
         
 TODO
 -------------------------------------------
    
-  2) Pub-sub
-  3) Routing
+  1) Pub-sub
+  2) Routing
   3) Repeaters
-  2) => 
-  
-  4) AJAX / Service Layer
-  5) Integrating with JQuery Widgets
+  4) => 
+  5) ...
+  6) props expansion using ...
+  7) AJAX / Service Layer
+  8) Integrating with JQuery Widgets
 

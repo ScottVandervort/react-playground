@@ -8,6 +8,7 @@ import ParentChildMessagingProps from './Components/ParentChildMessagingProps';
 import ParentChildMessagingMethod from './Components/ParentChildMessagingMethod';
 import ChildParentMessagingMethod from './Components/ChildParentMessagingMethod';
 import SiblingMessaging from './Components/SiblingMessaging';
+import SimpleRouting from './Components/SimpleRouting';
 //import logo from './logo.svg';
 //import './App.css';
 
@@ -40,6 +41,8 @@ class App extends Component {
         <ParentChildMessagingMethod/>
         <ChildParentMessagingMethod/>
         <SiblingMessaging/>
+        <h2>Routing</h2>
+        <SimpleRouting/>
       </div>      
     );
   }
