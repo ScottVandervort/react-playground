@@ -98,6 +98,8 @@ Components
 TODO
 -------------------------------------------
    
+    Having trouble getting route match etc... properties in COmponent.
+
   1) Pub-sub
   2) Routing
   3) Repeaters
