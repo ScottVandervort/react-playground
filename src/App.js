@@ -9,7 +9,7 @@ import ParentChildMessagingMethod from './Components/ParentChildMessagingMethod'
 import ChildParentMessagingMethod from './Components/ChildParentMessagingMethod';
 import SiblingMessaging from './Components/SiblingMessaging';
 import SimpleRouting from './Components/SimpleRouting';
-import NestedRouting from './Components/NestedRouting';
+import RoutingParamsAndArguments from './Components/RoutingParamsAndArguments';
 //import logo from './logo.svg';
 //import './App.css';
 
@@ -44,7 +44,7 @@ class App extends Component {
         <SiblingMessaging/>
         <h2>Routing</h2>
         <SimpleRouting/>
-        <NestedRouting/>
+        <RoutingParamsAndArguments/>
       </div>      
     );
   }
