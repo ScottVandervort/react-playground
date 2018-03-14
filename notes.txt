@@ -2,6 +2,9 @@ Urls
 -------------------------------------------
 
   https://www.javascriptstuff.com/component-communication/#1-props
+  
+  Making AJAX Calls
+  https://medium.com/@baphemot/how-to-make-ajax-requests-in-react-a6a52bb5a8b1
 
 JSX
 -------------------------------------------
@@ -55,6 +58,20 @@ Routing
     https://reacttraining.com/react-router/web/example/route-config
     https://medium.com/@pshrmn/a-simple-react-router-v4-tutorial-7f23ff27adf
 
+AJAX
+-------------------------------------------
+
+    - React does not come with an AJAX library - you are supposed to use whatever you want.
+
+        1. Directly in Component. ( Bad as presentation and data and logic are all-in-one )
+        2. In Parent Component and then passed onto Child Components.
+        3. Managed by Redux.
+
+Flux / Redux
+-------------------------------------------
+
+    - Pattern for maintaining state between components; uses a Pub-Sub pattern.    
+
 Components
 -------------------------------------------
 
@@ -81,31 +98,47 @@ Components
     -------------------------------------------
 
         - Immutable; Do not modify.
+        - Don't think of as element attributes :
+            1. They can be complex objects whereas attributes can only be simple data types.
+            2. They are never really visible on the element when browsing the markup - they are handled in Reacts's virtual DOM.
+
 
     State
     -------------------------------------------
 
-      - State is not initialized; If want to use in render(0 need to define variable.
+        - State is not initialized; If want to use in render(0 need to define variable.
 
     Messaging 
     -------------------------------------------
 
-    - Anything more complicated to direct child->parent or direct parent-<child communication should probably using publisher-subscriber ( it gets too complicated ).
+        - Anything more complicated to direct child->parent or direct parent-<child communication should probably use Redux or publisher-subscriber.
 
-    Flux / Redux
-    -------------------------------------------
+
         
 TODO
 -------------------------------------------
-   
-    Having trouble getting route match etc... properties in COmponent.
 
-  1) Pub-sub
+  
+
+
+  1) Repeaters     
+  
   2) Routing
-  3) Repeaters
-  4) => 
-  5) ...
-  6) props expansion using ...
-  7) AJAX / Service Layer
+  
+    2a) Nested Routing
+  
+  4) Authentication 
+  5) Authorization    
+    
+  6) ES6
+
+    6a) => 
+    6b) ...
+
+  7) Create CORS-enabled API that can be called by react starter project.
+
+    7a) AJAX / Service Layer
+    7b) Redux ( State Management / Component Communication )
+
   8) Integrating with JQuery Widgets
 

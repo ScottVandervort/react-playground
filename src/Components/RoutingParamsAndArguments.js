@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 const RoutingParamsAndArguments = () => (    
   <div>  
     <h3>Routing Parameters and Arguments</h3>   
-    <p>Route data can be passed to the Component using the &lt;Route&gt; "render" property and passing the match object.</p>        
+    <p>Route data can be passed to the Component using the &lt;Route&gt; "render" property and passing props object.</p>        
     <Router>
       <div>
         <ul>
@@ -23,7 +23,7 @@ const RoutingParamsAndArguments = () => (
         </ul>
         <hr />        
         <Route exact path="/topics" component={Topics} />        
-        <Route exact path='/topics/:id' render={({match}) => ( <SpecificTopic myProp="Welcome to Topic" routeInfo={match.params.id} /> )}/>      
+        <Route exact path='/topics/:id' render={(props) => ( <SpecificTopic title="Welcome to Topic" {...props} /> )}/>      
       </div>
   </Router>   
   </div>
@@ -31,7 +31,9 @@ const RoutingParamsAndArguments = () => (
 
  const SpecificTopic = (props) => (
    <div>      
-      <span>{props.myProp} {props.routeInfo}</span>
+      {console.log(props)}
+
+      <span>{props.title} path:  {props.match.url}</span>
     </div>
  )
 
