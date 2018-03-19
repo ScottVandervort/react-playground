@@ -10,6 +10,7 @@ import ChildParentMessagingMethod from './Components/ChildParentMessagingMethod'
 import SiblingMessaging from './Components/SiblingMessaging';
 import SimpleRouting from './Components/SimpleRouting';
 import RoutingParamsAndArguments from './Components/RoutingParamsAndArguments';
+import SimpleAjax from './Components/SimpleAjax';
 //import logo from './logo.svg';
 //import './App.css';
 
@@ -45,6 +46,8 @@ class App extends Component {
         <h2>Routing</h2>
         <SimpleRouting/>
         <RoutingParamsAndArguments/>
+        <h2>AJAX</h2>
+        <SimpleAjax/>
       </div>      
     );
   }

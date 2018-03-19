@@ -5,6 +5,7 @@ Urls
   
   Making AJAX Calls
   https://medium.com/@baphemot/how-to-make-ajax-requests-in-react-a6a52bb5a8b1
+  https://reactjs.org/docs/faq-ajax.html
 
 JSX
 -------------------------------------------
@@ -66,6 +67,8 @@ AJAX
         1. Directly in Component. ( Bad as presentation and data and logic are all-in-one )
         2. In Parent Component and then passed onto Child Components.
         3. Managed by Redux.
+
+    - Can use HTML5 Fetch() method. It's a very simple / functional implementation of AJAX.
 
 Flux / Redux
 -------------------------------------------

@@ -21,7 +21,7 @@ const RoutingParamsAndArguments = () => (
             <Link to="/topics/C">Topic C</Link>
           </li>                              
         </ul>
-        <hr />        
+             
         <Route exact path="/topics" component={Topics} />        
         <Route exact path='/topics/:id' render={(props) => ( <SpecificTopic title="Welcome to Topic" {...props} /> )}/>      
       </div>
