@@ -13,7 +13,7 @@ class SimpleAjax extends React.Component {
   
     componentDidMount() {        
 
-        fetch(  "http://localhost:3000/data/testCorsPost", 
+        fetch(  "http://localhost:3000/data/test", 
                 {   method: 'POST',
                     mode: 'cors'})
             .then(res => res.json())
@@ -36,7 +36,7 @@ class SimpleAjax extends React.Component {
           const { error, isLoaded, messageFromServer } = this.state;
 
           var title = "Simple AJAX";
-          var desc = "This example does a cross-domain POST using CORS and the HTML5 has a fetch() method. ES6 => is used to preserve the context of the component after the asynchronous AJAX call returns. The component's state is set and rendered thereafter.";
+          var desc = "This example does a cross-domain POST using CORS and the HTML5 has a fetch() method. ES6 => is used to preserve the context of the component after the asynchronous AJAX call returns. The component's state is set and rendered thereafter. This is actually a BAD pattern in that the presentation and data access are combined.";
 
           if (error) {                                
             return (

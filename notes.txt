@@ -6,6 +6,7 @@ Urls
   Making AJAX Calls
   https://medium.com/@baphemot/how-to-make-ajax-requests-in-react-a6a52bb5a8b1
   https://reactjs.org/docs/faq-ajax.html
+  https://www.javascriptstuff.com/react-ajax-best-practices/
 
 JSX
 -------------------------------------------
@@ -70,6 +71,8 @@ AJAX
 
     - Can use HTML5 Fetch() method. It's a very simple / functional implementation of AJAX.
 
+    - Best Practice : AJAX should only be performed in root/parent component.
+
 Flux / Redux
 -------------------------------------------
 
@@ -109,7 +112,9 @@ Components
     State
     -------------------------------------------
 
-        - State is not initialized; If want to use in render(0 need to define variable.
+        - State is not initialized; If want to use in render() need to define variable.
+
+        - Best Practice : State should be managed ONLY in root/parent component - which trickles down to child components.
 
     Messaging 
     -------------------------------------------
@@ -137,6 +142,8 @@ TODO
 
     6a) => 
     6b) ...
+	6c) Promise
+	6d) imports and exports
 
   7) Create CORS-enabled API that can be called by react starter project.
 

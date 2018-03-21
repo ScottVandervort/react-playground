@@ -11,6 +11,7 @@ import SiblingMessaging from './Components/SiblingMessaging';
 import SimpleRouting from './Components/SimpleRouting';
 import RoutingParamsAndArguments from './Components/RoutingParamsAndArguments';
 import SimpleAjax from './Components/SimpleAjax';
+import RootComponentAjax from './Components/RootComponentAjax';
 //import logo from './logo.svg';
 //import './App.css';
 
@@ -48,6 +49,7 @@ class App extends Component {
         <RoutingParamsAndArguments/>
         <h2>AJAX</h2>
         <SimpleAjax/>
+        <RootComponentAjax/>
       </div>      
     );
   }
