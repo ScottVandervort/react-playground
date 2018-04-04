@@ -78,6 +78,41 @@ Flux / Redux
 
     - Pattern for maintaining state between components; uses a Pub-Sub pattern.    
 
+
+			
+         --------------------------------Action
+         ||                               /\
+         \/                               ||		
+   Dispatcher   =>    Store      =>      View
+        /\               ||                
+		||               \/
+        ------------------
+
+	Different than MVC ...
+		- One-way binding; the View does NOT commnicate back to the Controller/Store.
+		- Communication only goes one direction - through Dispatcher via Action.
+		- Stores are like Models except they can manage more that one type of data.
+
+	Dispatcher
+		- sole receiver of Actions.
+		- notifies Stores of changes.
+
+	Stores 
+		- sole maintainer of state.
+		- sole maintainer of logic.
+		- registers callbacks with the Dispatcher; when Dispatcher receives and Action is notifies the Store. 
+		- can have dependencies on other stores; communicate through Actions / Dispatcher.
+
+	Controller-View
+		- listens to the Store for changes.
+
+
+
+
+	
+
+
+
 Components
 -------------------------------------------
 
@@ -131,6 +166,8 @@ TODO
 
   1) Repeaters     
   
+        1b) Nested.
+
   2) Routing
   
     2a) Nested Routing
@@ -151,4 +188,6 @@ TODO
     7b) Redux ( State Management / Component Communication )
 
   8) Integrating with JQuery Widgets
+
+  
 

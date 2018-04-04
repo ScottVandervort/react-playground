@@ -12,6 +12,7 @@ import SimpleRouting from './Components/SimpleRouting';
 import RoutingParamsAndArguments from './Components/RoutingParamsAndArguments';
 import SimpleAjax from './Components/SimpleAjax';
 import RootComponentAjax from './Components/RootComponentAjax';
+import SimpleRepeater from './Components/SimpleRepeater';
 //import logo from './logo.svg';
 //import './App.css';
 
@@ -50,6 +51,8 @@ class App extends Component {
         <h2>AJAX</h2>
         <SimpleAjax/>
         <RootComponentAjax/>
+        <h2>Repeaters</h2>
+        <SimpleRepeater/>
       </div>      
     );
   }
