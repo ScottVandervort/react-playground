@@ -26,3 +26,24 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+.css-transitions .panel {
+  width: 600px;
+  height: 100px;
+  overflow: hidden;
+  margin-top: 10px;  
+}
+
+.css-transitions .expand-contract-enter {
+  height: 0px;
+}
+
+.css-transitions .expand-contract-enter.expand-contract-enter-active {
+  height: 100px;
+  -webkit-transition: height .3s ease;
+}
+
+.css-transitions .expand-contract-leave.expand-contract-leave-active {
+  height: 0px;
+  -webkit-transition: height .3s ease;
+}

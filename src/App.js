@@ -13,8 +13,10 @@ import RoutingParamsAndArguments from './Components/RoutingParamsAndArguments';
 import SimpleAjax from './Components/SimpleAjax';
 import RootComponentAjax from './Components/RootComponentAjax';
 import SimpleRepeater from './Components/SimpleRepeater';
+import CssTransitionExpandContract from './Components/CssTransitionExpandContract';
+import JQueryExpandContract from './Components/JQueryExpandContract';
 //import logo from './logo.svg';
-//import './App.css';
+import './App.css';
 
 class App extends Component {  
 
@@ -53,6 +55,15 @@ class App extends Component {
         <RootComponentAjax/>
         <h2>Repeaters</h2>
         <SimpleRepeater/>
+        <h2>Transitions and Animations</h2>
+        <h3>React Transition Library</h3>
+        <p>These use the <a href="https://github.com/reactjs/react-transition-group">React Transition Library</a> to integrate Css [and Javascript-based] transitions/animations. 
+        A library is required because React maintains a virtual DOM - making it difficult to animate elements as they are added/removed. The library also exposes lifecycle hooks 
+        whereas javascript-based solutions can be applied.</p>        
+        <CssTransitionExpandContract/>        
+        <h3>JQuery/Javascript Library</h3>
+        <p>These use JQuery to perform Javascript-based animations. This works on older browsers that don't fully support Css.</p>                
+        <JQueryExpandContract/>     
       </div>      
     );
   }

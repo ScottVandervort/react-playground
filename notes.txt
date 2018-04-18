@@ -8,6 +8,11 @@ Urls
   https://reactjs.org/docs/faq-ajax.html
   https://www.javascriptstuff.com/react-ajax-best-practices/
 
+  Animations / Transitions
+  https://stackoverflow.com/questions/37677059/slideup-and-slidedown-animation-using-react-js
+  https://medium.com/@joethedave/achieving-ui-animations-with-react-the-right-way-562fa8a91935
+  ( React Library ) https://github.com/reactjs/react-transition-group
+
 JSX
 -------------------------------------------
 
@@ -72,6 +77,15 @@ AJAX
     - Can use HTML5 Fetch() method. It's a very simple / functional implementation of AJAX.
 
     - Best Practice : AJAX should only be performed in root/parent component.
+
+Animation / Transitions
+------------------------------------------
+
+    - Css has capacity for transitions - but it doesn't work well with dynamic heights / widths.
+    - React has a library for integrating transitions into it's virtual DOM. It supports Css or Javascript-based solutions.
+        The Javasript solution defers to JQuery ( or another library ).
+
+
 
 Flux / Redux
 -------------------------------------------
