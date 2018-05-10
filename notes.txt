@@ -134,6 +134,8 @@ Components
     - Component constructor should always accept at least one argument ( props ).
     - Always make sure you export the component.
     - Must be in PascalCase - no underscores.
+    - Changes to State and Props will cause a re-render. Be careful or this could cause and endless loop.
+    - Instead of storing stuff into this.{myData} - store it into State instead. 
 
     Simple
     -------------------------------------------

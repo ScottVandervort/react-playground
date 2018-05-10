@@ -38,12 +38,19 @@ class JQueryExpandContract extends React.Component {
 
     expandOrContract(e) {
       // Click event handler.
-      $(this.container).slideToggle("slow",function() {});
+      
+      //$(this.container).slideToggle("slow",function() {});
+
+      $(this.state.container).slideToggle("slow",function() {});
     }    
 
     setContainer(e) {
       // Get a handle to the DOM element that needs to be toggled.
-      this.container = e;
+      
+      //this.container = e;
+
+      if (this.state == null || this.state.container == null)
+        this.setState({"container" : e});
     }    
 
     render() {    
