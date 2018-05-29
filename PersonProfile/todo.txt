@@ -1,0 +1,9 @@
+Get working.
+
+Style it.
+
+Implement Redux.
+
+Implement update.
+
+Implement Typescript.

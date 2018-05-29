@@ -1,9 +1,21 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-const Dashboard = () => (    
-  <div>  
-    I am the Dashboard Component
-  </div>
-  )
+class Dashboard extends Component {
 
-  export default Dashboard;
+  render() {
+
+
+    console.log("Bang!");
+    console.log(this.props);
+
+    return (
+      <div>  
+         {this.props.user ? this.props.user.gender : ""}
+
+        I am the Dashboard Component
+      </div>
+    )
+  }
+}
+
+export default Dashboard;

@@ -7,6 +7,7 @@ const Navigation = () => (
       <div>
         <ul>
           <li>
+            Test
             <Link to="/">My Dashboard</Link>
           </li>
           <li>

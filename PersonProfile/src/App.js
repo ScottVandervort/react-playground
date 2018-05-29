@@ -8,10 +8,29 @@ import Bills from "./Components/Bills";
 import Complaints from "./Components/Complaints";
 import CustomerCare from "./Components/CustomerCare";
 import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
+import ProfileService from "./Services/ProfileService";
 
 
 class App extends Component {
   
+  constructor () {
+    super();
+
+    this.state = { "user" : null };
+  }
+  
+  componentDidMount() {
+
+console.log("here!");
+
+    let profileService = new ProfileService();
+
+    profileService.getUser().then(user => {
+        this.setState({ "user" : user});
+    });
+  
+  }
+
   render() {
     return (
       <Router>
@@ -24,6 +43,7 @@ class App extends Component {
             <div>
               <ul>
                 <li>
+                  <span class="glyphicon glyphicon-dashboard"></span>                  
                   <Link to="/">My Dashboard</Link>
                 </li>
                 <li>
@@ -47,7 +67,7 @@ class App extends Component {
 
         <main className="App-main"> 
             <Switch>
-              <Route exact path="/" component={Dashboard} />        
+              <Route exact path="/" component={() => <Dashboard user={this.state.user} />} />              
               <Route path="/accounts" component={Accounts} />        
               <Route path="/mobile" component={Mobile} />        
               <Route path="/bills" component={Bills} />        
