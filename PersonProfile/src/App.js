@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
-import './App.css';
+import './css/App.css';
 import Dashboard from "./Components/Dashboard";
 import Accounts from "./Components/Accounts";
 import Mobile from "./Components/Mobile";
@@ -21,8 +21,6 @@ class App extends Component {
   
   componentDidMount() {
 
-console.log("here!");
-
     let profileService = new ProfileService();
 
     profileService.getUser().then(user => {
@@ -35,48 +33,59 @@ console.log("here!");
     return (
       <Router>
 
-      <div className="App">
-        
-        <header className="App-header">Header</header>
+        <div>
 
-        <nav className="App-nav">
-            <div>
-              <ul>
-                <li>
-                  <span class="glyphicon glyphicon-dashboard"></span>                  
-                  <Link to="/">My Dashboard</Link>
-                </li>
-                <li>
-                  <Link to="/accounts">Accounts</Link>
-                </li>
-                <li>
-                  <Link to="/mobile">Mobile</Link>
-                </li>
-                <li>
-                  <Link to="/bills">Bills</Link>
-                </li>          
-                <li>
-                  <Link to="/complaints">Complaints</Link>
-                </li>                    
-                <li>
-                  <Link to="/customerCare">Customer Care</Link>
-                </li>                              
-              </ul>               
-            </div>         
-        </nav>        
+          <div className="container-fluid">
 
-        <main className="App-main"> 
-            <Switch>
-              <Route exact path="/" component={() => <Dashboard user={this.state.user} />} />              
-              <Route path="/accounts" component={Accounts} />        
-              <Route path="/mobile" component={Mobile} />        
-              <Route path="/bills" component={Bills} />        
-              <Route path="/complaints" component={Complaints} />        
-              <Route path="/customerCare" component={CustomerCare} />        
-            </Switch>                        
-        </main>
-      </div>
+            <div className="row content">
+          
+              <header className="header container-fluid">
+                Header
+              </header>              
 
+              <nav class="sidenav col-lg-3 col-sml-12">
+                <ul>
+                  <li>
+                    <span class="glyphicon glyphicon-dashboard"></span>                  
+                    <Link to="/">My Dashboard</Link>
+                  </li>
+                  <li>
+                    <Link to="/accounts">Accounts</Link>
+                  </li>
+                  <li>
+                    <Link to="/mobile">Mobile</Link>
+                  </li>
+                  <li>
+                    <Link to="/bills">Bills</Link>
+                  </li>          
+                  <li>
+                    <Link to="/complaints">Complaints</Link>
+                  </li>                    
+                  <li>
+                    <Link to="/customerCare">Customer Care</Link>
+                  </li>                              
+                </ul>                     
+              </nav>                
+
+              <main class="main col-lg-3 col-sml-12">
+                <Switch>
+                  <Route exact path="/" component={() => <Dashboard user={this.state.user} />} />              
+                  <Route path="/accounts" component={Accounts} />        
+                  <Route path="/mobile" component={Mobile} />        
+                  <Route path="/bills" component={Bills} />        
+                  <Route path="/complaints" component={Complaints} />        
+                  <Route path="/customerCare" component={CustomerCare} />        
+                </Switch>                        
+              </main>                   
+
+            </div>
+          </div>
+          
+          <footer class="container-fluid footer">
+            Footer
+          </footer>      
+
+        </div>
       </Router>
     );
   }

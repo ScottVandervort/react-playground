@@ -1,9 +1,46 @@
-Get working.
+Links
+-----
+Adding Bootstrap to React Starter Project : http://blog.burgettweb.net/2017/01/07/using-bootstrap-with-create-react-app/
+Bootstrap versus Css Grid w/ Examples ( Use Bootstrap ) : https://medium.com/wdstack/bootstrap-is-still-better-than-css-grid-for-creating-layouts-522b7baf0411
+Bootstrap Grid Templates : https://www.w3schools.com/bootstrap/bootstrap_templates.asp
 
-Style it.
+Grunt Tasks
+-----------
 
-Implement Redux.
+>npm run [copy-dependencies]
 
-Implement update.
+To Do 
+-----
 
-Implement Typescript.
+    1. Get working.
+
+    2. Style it.
+
+        2a. Get Sass working with React-Starter.
+
+    3. Implement Redux.
+
+    4. Implement update.
+
+    5. Implement Typescript.
+
+
+
+Day One
+-------
+- Created project using React Starter : https://github.com/facebookincubator/create-react-app
+- Got basic layout working with Css-Grid
+
+Day Two
+-------
+- Got Routing working as well as placeholders for React Components.
+
+Day Three
+---------
+- Started using Css-Grid but migrated to Bootstrap 3. Why? React-Bootstrap only supports Bootstrap 3 - and I would like to use it's gylp library and MIGHT want to use it's widgets.
+- Added a GruntFile to copy resources over from node_modules - but decided to just pull from CDN's for now for ease and performance reasons.
+- Moved Css to css folder.
+
+
+
+
