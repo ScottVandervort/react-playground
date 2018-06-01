@@ -16,8 +16,6 @@ To Do
 
     2. Style it.
 
-        2a. Get Sass working with React-Starter.
-
     3. Implement Redux.
 
     4. Implement update.

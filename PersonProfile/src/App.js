@@ -67,15 +67,17 @@ class App extends Component {
                 </ul>                     
               </nav>                
 
-              <main class="main col-lg-3 col-sml-12">
-                <Switch>
-                  <Route exact path="/" component={() => <Dashboard user={this.state.user} />} />              
-                  <Route path="/accounts" component={Accounts} />        
-                  <Route path="/mobile" component={Mobile} />        
-                  <Route path="/bills" component={Bills} />        
-                  <Route path="/complaints" component={Complaints} />        
-                  <Route path="/customerCare" component={CustomerCare} />        
-                </Switch>                        
+              <main class="main col-lg-9 col-sml-12">
+                <div class="main-container">
+                  <Switch>
+                    <Route exact path="/" component={() => <Dashboard user={this.state.user} />} />              
+                    <Route path="/accounts" component={Accounts} />        
+                    <Route path="/mobile" component={Mobile} />        
+                    <Route path="/bills" component={Bills} />        
+                    <Route path="/complaints" component={Complaints} />        
+                    <Route path="/customerCare" component={CustomerCare} />        
+                  </Switch>                   
+                </div>     
               </main>                   
 
             </div>
