@@ -34,40 +34,50 @@ class App extends Component {
       <Router>
 
         <div>
+          <div class="container-fluid">
 
-          <div className="container-fluid">
+            <div class="row"> 
 
-            <div className="row content">
-          
-              <header className="header container-fluid">
-                Header
-              </header>              
+              <div class="col-sm-0 col-md-2 col-lg-1"/>
 
-              <nav class="sidenav col-lg-3 col-sml-12">
+              <header class="col-sm-12 col-md-10 col-lg-11">
+                My Dashboard
+              </header>                               
+
+            </div>
+
+            <div class="row content"> 
+
+              <nav class="side-nav col-sm-12 col-md-2 col-lg-1">
                 <ul>
                   <li>
                     <span class="glyphicon glyphicon-dashboard"></span>                  
                     <Link to="/">My Dashboard</Link>
                   </li>
                   <li>
+                    <span class="glyphicon glyphicon-user"></span>
                     <Link to="/accounts">Accounts</Link>
                   </li>
                   <li>
+                    <span class="glyphicon glyphicon-phone"></span>
                     <Link to="/mobile">Mobile</Link>
                   </li>
                   <li>
+                    <span class="glyphicon glyphicon-usd"></span>
                     <Link to="/bills">Bills</Link>
                   </li>          
                   <li>
+                    <span class="glyphicon glyphicon-fire"></span>
                     <Link to="/complaints">Complaints</Link>
                   </li>                    
                   <li>
+                    <span class="glyphicon glyphicon-earphone"></span>
                     <Link to="/customerCare">Customer Care</Link>
                   </li>                              
                 </ul>                     
-              </nav>                
+              </nav>                 
 
-              <main class="main col-lg-9 col-sml-12">
+              <main class="main col-sm-12 col-md-10 col-lg-11">
                 <div class="main-container">
                   <Switch>
                     <Route exact path="/" component={() => <Dashboard user={this.state.user} />} />              
@@ -78,15 +88,18 @@ class App extends Component {
                     <Route path="/customerCare" component={CustomerCare} />        
                   </Switch>                   
                 </div>     
-              </main>                   
+              </main>               
 
-            </div>
+            </div>            
           </div>
           
-          <footer class="container-fluid footer">
-            Footer
-          </footer>      
-
+          <div class="container-fluid">
+            <div class="row"> 
+              <footer>
+                footer
+              </footer>
+            </div>
+          </div>
         </div>
       </Router>
     );

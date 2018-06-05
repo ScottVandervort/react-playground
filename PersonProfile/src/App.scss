@@ -1,5 +1,15 @@
+$background-color: #32394b;
+$main-panel-color: #282f41;
+$font-color: white;
+
+body {
+  background-color: $background-color;
+  color: $font-color;
+}
+
 .row.content {
-  height: 1500px; }
+  height: 1500px; 
+}
 
 .side-nav {
   height: 100%; 
@@ -10,13 +20,6 @@
   }
 }
 
-@media screen and (max-width: 767px) {
-  .sidenav {
-    height: auto;
-    padding: 15px; }
-  .row.content {
-    height: auto; } }
-
 .main {
   display: flex;
   height:100%;
@@ -25,7 +28,24 @@
     border-radius: 20px;
     padding: 2rem;
     width:100%;
-    background-color: #282f41; 
+    background-color:$main-panel-color; 
+  } 
+}
+
+@media screen and (max-width: 767px) {
+  .sidenav {
+    height: auto;
+    padding: 15px; }
+  .row.content {
+    height: auto; 
+  } 
+  .main {
+    .main-container {
+      border-radius: 0;
+      padding: 2rem;
+      width:100%;
+      background-color: $background-color;
+    }
   }
 }
  
