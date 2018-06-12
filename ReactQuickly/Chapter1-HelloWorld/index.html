@@ -1,22 +1,33 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <script src="js/react.js"></script>
-    <script src="js/react-dom.js"></script>
-  </head>
-  <body>
-    <div id="content"></div>
-    <script type="text/javascript">
-      var h1 = React.createElement('h1', null, 'Hello world!')
-      ReactDOM.render(
-        h1,
-        document.getElementById('content')
-      )
-      // Usage without the h1 variable
-      // ReactDOM.render(
-      //   React.createElement('h1', null, 'Hello world!'),
-      //   document.getElementById('content')
-      // )
+	<head>
+		<script src="js/react.js"></script>
+		<script src="js/react-dom.js"></script>
+	</head>
+	<body>
+		<div id="content"></div>
+		<script type="text/javascript">
+	
+	
+			// React.createElement(component, props, ...children)
+			// HTML elements are specified in quotes, ex: 'h1'. NOT using quotes would render a react element of that name.
+			// ...children are all of the components to render under the <h1>.
+			var h1 = React.createElement(
+				'h1', 
+				null, 
+				'Hello world!')
+			
+			// Do not need to use JSX...
+			ReactDOM.render(
+				h1,
+				document.getElementById('content')
+			)
+			
+			// Usage without the h1 variable
+			// ReactDOM.render(
+			//   React.createElement('h1', null, 'Hello world!'),
+			//   document.getElementById('content')
+			// )
     </script>
   </body>
 </html>
