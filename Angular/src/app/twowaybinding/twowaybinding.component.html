@@ -1,0 +1,15 @@
+<div>
+    <p>Need to use ngModel to bind to the components' property. Make sure you include FormsModule</p>
+
+    <p>Two-way binding to a property</p>
+    <input [(ngModel)]="myProperty" placeholder="my property">
+    <br>Output : {{myProperty}}
+
+    <p>Two-way binding to an object</p>
+    <input [(ngModel)]="myPropertyObject.id" placeholder="id">
+    <br/>
+    <input [(ngModel)]="myPropertyObject.name" placeholder="name">
+    <p>Output : 
+    <br/>{{myPropertyObject.id}}
+    <br/>{{myPropertyObject.name}}
+</div>
