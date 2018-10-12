@@ -7,6 +7,7 @@ import { OneWayBindingComponent } from './onewaybinding/onewaybinding.component'
 import { TwoWayBindingComponent } from './twowaybinding/twowaybinding.component';
 import { SimpleRepeaterComponent } from './simplerepeater/simplerepeater.component';
 import { MasterDetailSimpleComponent } from './masterdetailsimple/masterdetailsimple.component';
+import { EventHandlingComponent } from './eventhandling/eventhandling.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { MasterDetailSimpleComponent } from './masterdetailsimple/masterdetailsi
     OneWayBindingComponent,
     TwoWayBindingComponent,
     SimpleRepeaterComponent,
-    MasterDetailSimpleComponent
+    MasterDetailSimpleComponent,
+    EventHandlingComponent
   ],
   imports: [
     BrowserModule,

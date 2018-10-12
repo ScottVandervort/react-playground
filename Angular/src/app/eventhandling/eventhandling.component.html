@@ -1,0 +1,9 @@
+<p>Simple click handler : </p>
+  <button (click)="onClickMe()">Click me!</button>
+  {{clickMessage}}
+<p>Getting the DOM event. Send in $event as an argument : </p>
+  <input (keyup)="onKey($event)">
+  {{values}}
+<p>Getting a reference to the clicked element. ( Type something and press ENTER ) : </p>
+  <input #box (keyup.enter)="onEnter(box.value)">
+  <p>{{value}}</p>

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { SimpleData } from '../simple-data';
+import { SimpleCollection } from '../simple-collection';
 
 @Component({
   selector: 'MasterDetailSimple',
@@ -7,7 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MasterDetailSimpleComponent implements OnInit {
 
+  myCollection = SimpleCollection;
+  selectedData : SimpleData;
+
   constructor() { }
+
+  onSelect(myData : SimpleData ) {
+    this.selectedData = myData;
+  }
 
   ngOnInit() {
   }

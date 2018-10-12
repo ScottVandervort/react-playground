@@ -1,3 +1,13 @@
-<p>
-  masterdetailsimple works!
-</p>
+<p>Click on an item to display its detail. Bind the detail values to the properties om the Component using ngModel </p>
+<ul>
+  <!-- Apply "selected" class if this item has been selected. -->
+  <li [class.selected]="myData === selectedData" 
+      *ngFor="let myData of myCollection" 
+      (click)="onSelect(myData)">
+    <span>{{myData.id}}</span> {{myData.name}}
+  </li>
+<ul>  
+<!-- Only display the Detail if something has been selected -->  
+<div *ngIf="selectedData">
+  Selected : <input [(ngModel)]="selectedData.name" placeholder="name">
+</div>
