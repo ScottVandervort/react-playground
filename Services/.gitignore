@@ -1,0 +1,7 @@
+.vs
+packages
+Services/obj
+Services/bin
+
+
+.DS_Store
