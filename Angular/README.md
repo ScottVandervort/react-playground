@@ -14,9 +14,9 @@ As I want to hit an actual service I created a very simple CORS-enabled service 
 
 # Urls
 
+None yet...
 
-
-# Using the Angualr CLI ( boilerplate comments from project generation 
+# Using the Angualr CLI 
 
 ## Development server
 
@@ -41,9 +41,3 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
-
-## What I am working on ....
-
-When running ng-serve you DON'T have a backing server to which you can make AJAX requests - everything needs to be mocked up. 
-
-I created a very very simple WebAPI CORS servce which I intend to call with the Angualr Http Module.
