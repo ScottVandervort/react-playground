@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { SimpleAjaxService } from '../simpleajax.service'
+import { SimpleAjaxModel } from '../simpleajaxmodel';
 
 @Component({
   selector: 'SimpleAjax',
@@ -7,9 +9,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SimpleAjaxComponent implements OnInit {
 
-  constructor() { }
+  myCollection : SimpleAjaxModel [];
+
+  constructor( private simpleAjaxService: SimpleAjaxService ) { }
 
   ngOnInit() {
+      this.simpleAjaxService.test().subscribe( data => { this.myCollection = data });
   }
-
 }

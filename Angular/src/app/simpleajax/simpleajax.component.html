@@ -1,4 +1,8 @@
-<p>
-  <p>AJAX should be performed within a service that is injected into the component.</p>
-  simple-ajax works!
-</p>
+<div>
+  <p>AJAX should be performed within a service that is injected into the component. This feed is from a CORS-enabled web service.</p>
+  <ul>
+    <li *ngFor="let myData of myCollection">
+      <span>{{myData.Id}}</span> {{myData.Name}}
+    </li>
+  </ul> 
+</div> 

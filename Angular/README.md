@@ -6,11 +6,9 @@ It is a showcase of basic functionality that is required acorss all client appli
 
 # What I am working on ....
 
-## SimpleAJAX
+## POSTing Data
 
-When running ng-serve you DON'T have a backing server to which you can make AJAX requests - everything needs to be mocked up. 
-
-As I want to hit an actual service I created a very simple CORS-enabled service which I intend to call with the Angualar Http Module.
+Okay, so I have a simple GET/Fetch working. Next up? POSTing a Form.
 
 # Urls
 
